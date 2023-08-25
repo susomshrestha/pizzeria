@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+
+.max-width {
+  max-width: 1280px;
+  margin: auto;  
+}
+
+$color-caribean-current: #006D77;
+$color-tiffany-blue: #83C5BE;
+$color-azure: #EDFAFD;
+$color-pale-dogwood: #FFDDD2;
+$color-atomic-tangerine: #E29578;
+$color-black: #212529;
+
+$bg-light: $color-azure;
+$primary-text-color: $color-black;
+$link-color: $color-atomic-tangerine;
