@@ -18,3 +18,41 @@ $color-black: #212529;
 $bg-light: $color-azure;
 $primary-text-color: $color-black;
 $link-color: $color-atomic-tangerine;
+$icon-color: $color-caribean-current;
+
+.home {
+  .category {
+    .carousel {
+      width: 100%;
+      padding: 0 40px;
+
+      .slick-track {
+        width: 100%;
+      }
+
+      .arrow {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        z-index: 1;
+      }
+
+      .right {
+        right: 0;
+      }
+
+      .left {
+        left: 0;
+      }
+
+    }
+  }
+}

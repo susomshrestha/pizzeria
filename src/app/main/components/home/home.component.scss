@@ -1,6 +1,85 @@
-@import '/src/styles.scss';
+@import "/src/styles.scss";
 
 .home {
-  background-color: $bg-light;
-  min-height: 800px;
+
+  .sec-header {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .banner-wrap {
+    padding: 40px;
+
+    .banner {
+      max-height: 500px;
+      height: 500px;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .category-wrap {
+    padding: 40px;
+    background: $bg-light;
+
+    .category {
+      display: flex;
+
+      .category-item {
+        background: white;
+        padding: 20px 40px;
+        border-radius: 12px;
+        min-width: 100px;
+        text-align: center;
+
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+
+        .icon {
+          color: $icon-color;
+        }
+        .title {
+          margin-top: 16px;
+          font-weight: 600;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .info-wrap {
+    padding: 40px;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+
+      .info-left, .info-right {
+        flex: 1;
+        padding: 20px;
+      }
+
+      .info-right {
+        margin-left: 20px;
+        background-color: $bg-light;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .home {
+    .info-wrap {
+      .info {
+        flex-direction: row;
+      }
+    }
+  }
 }

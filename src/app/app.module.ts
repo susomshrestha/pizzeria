@@ -7,8 +7,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { MainModule } from './main/main.module';
 import { AdminModule } from './admin/admin.module';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faPizzaSlice, faBars } from '@fortawesome/free-solid-svg-icons';
-
+import { faPizzaSlice, faBars, faLeftLong } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [AppComponent, MainComponent],
@@ -19,7 +18,6 @@ import { faPizzaSlice, faBars } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppModule {
   constructor(library: FaIconLibrary) {
-    library.addIcons(faPizzaSlice, faPizzaSlice);
-    library.addIcons(faBars, faBars);
+    library.addIcons(faPizzaSlice, faBars, faLeftLong);
   }
 }

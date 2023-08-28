@@ -1,0 +1,27 @@
+@import './../../../../../styles.scss';
+
+.footer-wrap {
+  background: $bg-light;
+  padding: 40px;
+  
+  .footer {
+    text-align: center;
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+
+      .icon {
+        padding: 4px 16px;
+        svg {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+
+    .copywright {
+      margin-top: 20px;
+    }
+  }
+}

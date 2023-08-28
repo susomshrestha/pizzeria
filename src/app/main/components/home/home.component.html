@@ -1,3 +1,77 @@
 <div class="home">
-  HOME
+  <div class="banner-wrap">
+    <div class="max-width">
+      <div class="banner">
+        <img src="../../../../assets/images/pizza-one.jpeg" alt="pizza" />
+      </div>
+    </div>
+  </div>
+  <div class="category-wrap">
+    <div class="max-width">
+      <div class="sec-header">Our Items</div>
+      <div class="category">
+        <ngx-slick-carousel
+          class="carousel"
+          #slickModal="slick-carousel"
+          [config]="slideConfig"
+        >
+          <div
+            ngxSlickItem
+            class="category-item"
+            *ngFor="let category of categories"
+          >
+            <div class="icon">
+              <fa-icon icon="pizza-slice" size="5x"></fa-icon>
+            </div>
+            <div class="title">{{ category.title }}</div>
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
+  </div>
+  <div class="info-wrap">
+    <div class="max-width">
+      <div class="sec-header">Lorem Ipsum</div>
+      <div class="info">
+        <div class="info-left">
+          <div>Lorem Imsum</div>
+          <div>
+            <p>
+
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam
+              donec adipiscing tristique risus nec. Tempor id eu nisl nunc mi
+              ipsum faucibus vitae aliquet. Sed pulvinar proin gravida hendrerit
+              lectus. Donec ultrices tincidunt arcu non sodales. Elementum integer
+              enim neque volutpat ac tincidunt vitae semper quis. Arcu ac tortor
+              dignissim convallis aenean et tortor at.
+            </p>
+            <p>
+
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam
+              donec adipiscing tristique risus nec. Tempor id eu nisl nunc mi
+              ipsum faucibus vitae aliquet. Sed pulvinar proin gravida hendrerit
+              lectus. Donec ultrices tincidunt arcu non sodales. Elementum integer
+              enim neque volutpat ac tincidunt vitae semper quis. Arcu ac tortor
+              dignissim convallis aenean et tortor at.
+            </p>
+            <p>
+
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam
+              donec adipiscing tristique risus nec. Tempor id eu nisl nunc mi
+              ipsum faucibus vitae aliquet. Sed pulvinar proin gravida hendrerit
+              lectus. Donec ultrices tincidunt arcu non sodales. Elementum integer
+              enim neque volutpat ac tincidunt vitae semper quis. Arcu ac tortor
+              dignissim convallis aenean et tortor at.
+            </p>
+          </div>
+        </div>
+        <div class="info-right">
+          <img src="../../../../assets/images/pizzasvg.svg" />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
