@@ -1,0 +1,75 @@
+@import "/src/styles.scss";
+
+.about-us-wrap {
+  padding: 40px;
+
+  .about-us {
+    .who-div,
+    .what-div {
+      display: flex;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 12px;
+      overflow: hidden;
+      flex-direction: column;
+      color: white;
+
+      .left,
+      .right {
+        flex: 1;
+        padding: 40px;
+      }
+    }
+
+    .what-div {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column-reverse;
+
+      .right {
+        background: $color-atomic-tangerine;
+      }
+    }
+
+    .who-div {
+      .left {
+        background: $color-atomic-tangerine;
+      }
+    }
+
+    .div-header {
+      font-size: $font-size-2xl;
+      font-weight: 600;
+    }
+
+    .div-info {
+      font-size: $font-size-xl;
+      line-height: $font-size-3xl;
+
+      ul {
+        li {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .about-us-wrap {
+    .about-us {
+      .who-div,
+      .what-div {
+        flex-direction: row;
+      }
+
+      .div-header {
+        font-size: $font-size-6xl;
+      }
+      
+      .div-info {
+        font-size: $font-size-4xl;
+        margin-top: 20px;
+      }
+    }
+  }
+}

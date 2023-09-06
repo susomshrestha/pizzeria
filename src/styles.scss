@@ -8,6 +8,7 @@ body {
   margin: auto;  
 }
 
+// colors
 $color-caribean-current: #006D77;
 $color-tiffany-blue: #83C5BE;
 $color-azure: #EDFAFD;
@@ -19,6 +20,18 @@ $bg-light: $color-azure;
 $primary-text-color: $color-black;
 $link-color: $color-atomic-tangerine;
 $icon-color: $color-caribean-current;
+
+// font sizes
+$font-size-sm: 12px;
+$font-size-m: 14px;
+$font-size-lg: 16px;
+$font-size-xl: 18px;
+$font-size-2xl: 20px;
+$font-size-3xl: 24px;
+$font-size-4xl: 30px;
+$font-size-5xl: 34px;
+$font-size-6xl: 40px;
+$font-size-7xl: 60px;
 
 .home {
   .category {

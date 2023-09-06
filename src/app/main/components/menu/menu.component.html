@@ -1,0 +1,31 @@
+<div class="menu-wrap">
+  <div class="max-width">
+    <div class="menu">
+      <div class="tabs">
+        <div class="tab" *ngFor="let cat of menu; let i = index">
+          <input
+            type="radio"
+            name="css-tabs"
+            [id]="'tab-' + i"
+            [attr.checked]="i === 0 ? '' : null"
+            class="tab-switch"
+          />
+          <label [for]="'tab-' + i" class="tab-label">{{ cat.title }}</label>
+          <div class="tab-content">
+            <div class="menu-item">
+              <div class="item" *ngFor="let item of cat.items">
+                <div class="item-title-desc">
+                  <div class="item-title">{{ item.name }}</div>
+                  <div class="item-desc">
+                    {{ item.desc }}
+                  </div>
+                </div>
+                <div class="item-price">{{ item.priceM }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

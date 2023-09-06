@@ -1,0 +1,108 @@
+@import "/src/styles.scss";
+
+.menu {
+  padding: 40px;
+
+  .tabs {
+    position: relative;
+    margin: 3rem 0;
+    height: 60rem;
+
+    &::before {
+      content: "";
+      display: table;
+    }
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  
+  .tab {
+    float: left;
+  }
+
+  .tab-switch {
+    display: none;
+    &:checked {
+      + {
+        .tab-label {
+          background: $color-atomic-tangerine;
+          color: $primary-text-color;
+          border-bottom: 0;
+          border-right: 0.125rem solid $color-atomic-tangerine;
+          transition: all 0.35s;
+          z-index: 1;
+          top: -0.0625rem;
+        }
+        label {
+          + {
+            .tab-content {
+              z-index: 2;
+              opacity: 1;
+              transition: all 0.35s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tab-label {
+    position: relative;
+    display: block;
+    line-height: 2.75em;
+    height: 3em;
+    padding: 0 1.618em;
+    background: white;
+    border-right: 0.125rem solid white;
+    color: $primary-text-color;
+    cursor: pointer;
+    top: 0;
+    transition: all 0.25s;
+    &:hover {
+      top: -0.25rem;
+      transition: top 0.25s;
+    }
+  }
+
+  .tab-content {
+    position: absolute;
+    // min-height: 12rem;
+    z-index: 1;
+    top: 2.75em;
+    left: 0;
+    padding: 1.618rem;
+    background: #fff;
+    color: $primary-text-color;
+    opacity: 0;
+    transition: all 0.35s;
+    width: 100%;
+
+    .menu-item {
+      
+      .item {
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .item-title {
+          font-size: $font-size-3xl;
+        }
+        
+        .item-desc {
+          margin-top: 10px;
+          margin-left: 4px;
+        }
+
+        .item-price {
+          font-weight: 600;
+          font-size: $font-size-4xl;
+        }
+      }
+    }
+  }
+}
