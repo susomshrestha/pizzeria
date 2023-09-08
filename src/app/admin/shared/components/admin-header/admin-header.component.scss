@@ -1,0 +1,100 @@
+@import "/src/styles.scss";
+
+$page-header-width: 250px;
+$page-header-width-sm: 100px;
+
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  padding-top: 20px;
+  width: $page-header-width;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: all 0.5s ease;
+
+  &.collapsed {
+    width: $page-header-width-sm;
+  }
+
+  .collapse-btn {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: flex-end;
+
+    fa-icon {
+      cursor: pointer;
+      color: $color-admin-main;
+    }
+  }
+
+  nav {
+    .profile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 20px;
+
+      fa-icon {
+        color: $color-admin-main;
+      }
+
+      span {
+        margin-top: 20px;
+        font-size: $font-size-2xl;
+        font-weight: 600;
+      }
+    }
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+
+      li {
+        .side-item {
+          display: flex;
+          align-items: center;
+          padding: 20px;
+          cursor: pointer;
+
+          &.collapsed {
+            justify-content: center;
+          }
+
+          fa-icon {
+            min-width: 24px;
+            max-width: 24px;
+            color: $color-admin-main;
+          }
+
+          .side-title {
+            font-weight: 600;
+            margin-left: 15px;
+            font-size: $font-size-xl;
+            color: $color-admin-main;
+
+            &.collapsed {
+              display: none;
+            }
+          }
+
+          &.selected,
+          &:hover {
+            background-color: $color-admin-main;
+
+            fa-icon {
+              color: white;
+            }
+
+            .side-title {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

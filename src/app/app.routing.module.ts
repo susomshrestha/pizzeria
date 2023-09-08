@@ -11,13 +11,18 @@ const routes: Routes = [
   {
     path: 'admin',
     pathMatch: 'full',
-    loadChildren: () => import('./main/main.module').then((m) => m.MainModule),
+    loadChildren: () =>
+      import('./admin/admin.module').then((m) => m.AdminModule),
   },
+  { path: '', redirectTo: 'main', pathMatch: 'full' },
 ];
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, RouterModule.forRoot(routes)],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

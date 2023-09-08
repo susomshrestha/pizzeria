@@ -1,1 +1,4 @@
-<p>admin works!</p>
+<app-admin-header (collapseEvent)="toggleCollapse($event)"></app-admin-header>
+<div class="page-content" [class.collapsed]="collapse">
+  <router-outlet></router-outlet>
+</div>

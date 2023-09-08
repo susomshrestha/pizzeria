@@ -2,22 +2,49 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
 import { AppRoutingModule } from './app.routing.module';
 import { MainModule } from './main/main.module';
 import { AdminModule } from './admin/admin.module';
-import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faPizzaSlice, faBars, faLeftLong } from '@fortawesome/free-solid-svg-icons';
+import {
+  FaIconLibrary,
+  FontAwesomeModule,
+} from '@fortawesome/angular-fontawesome';
+import {
+  faPizzaSlice,
+  faBars,
+  faLeftLong,
+  faBorderNone,
+  faImages,
+  faGear,
+  faUtensils,
+  faUser,
+  faCircleArrowLeft,
+  faCircleArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
+import { faSquare } from '@fortawesome/free-regular-svg-icons';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent],
-  imports: [BrowserModule, AppRoutingModule, MainModule, AdminModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, SlickCarouselModule, MainModule, AdminModule],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [FontAwesomeModule]
+  exports: [FontAwesomeModule],
 })
 export class AppModule {
   constructor(library: FaIconLibrary) {
-    library.addIcons(faPizzaSlice, faBars, faLeftLong);
+    library.addIcons(
+      faPizzaSlice,
+      faBars,
+      faLeftLong,
+      faBorderNone,
+      faImages,
+      faGear,
+      faSquare,
+      faUtensils,
+      faUser,
+      faCircleArrowLeft,
+      faCircleArrowRight
+    );
   }
 }

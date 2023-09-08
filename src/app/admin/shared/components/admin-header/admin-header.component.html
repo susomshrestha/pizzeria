@@ -1,0 +1,39 @@
+<header class="page-header" [class.collapsed]="collapse">
+  <nav>
+    <div class="collapse-btn">
+      <fa-icon *ngIf="!collapse" icon="circle-arrow-left" size="lg" (click)="toggleCollapse()"></fa-icon>
+      <fa-icon *ngIf="collapse" icon="circle-arrow-right" size="lg" (click)="toggleCollapse()"></fa-icon>
+    </div>
+    <div class="profile">
+      <fa-icon *ngIf="!collapse" icon="user" size="5x"></fa-icon>
+      <fa-icon *ngIf="collapse" icon="user" size="xl"></fa-icon>
+      <span *ngIf="!collapse">Admin</span>
+    </div>
+    <ul>
+      <li>
+        <div class="side-item" [routerLink]="['/admin']" [class.collapsed]="collapse">
+          <fa-icon icon="border-none" size="xl"></fa-icon>
+          <span class="side-title" [class.collapsed]="collapse">Dashboard</span>
+        </div>
+      </li>
+      <li>
+        <div class="side-item" [routerLink]="['/admin/menu']" [class.collapsed]="collapse">
+          <fa-icon icon="utensils" size="xl"></fa-icon>
+          <span class="side-title" [class.collapsed]="collapse">Menu</span>
+        </div>
+      </li>
+      <li>
+        <div class="side-item" [routerLink]="['/admin/gallery']" [class.collapsed]="collapse">
+          <fa-icon icon="images" size="xl"></fa-icon>
+          <span class="side-title" [class.collapsed]="collapse">Gallery</span>
+        </div>
+      </li>
+      <li>
+        <div class="side-item" [routerLink]="['/admin/setting']" [class.collapsed]="collapse">
+          <fa-icon icon="gear" size="xl"></fa-icon>
+          <span class="side-title" [class.collapsed]="collapse">Setting</span>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>

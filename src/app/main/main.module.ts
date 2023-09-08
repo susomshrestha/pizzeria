@@ -1,23 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './components/home/home.component';
 import { MainRoutingModule } from './main-routing.module';
-import { HeaderComponent } from './shared/components/header/header.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AboutComponent } from './components/about/about.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { MainComponent } from './main.component';
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, FooterComponent, AboutComponent, GalleryComponent, MenuComponent],
-  imports: [
-    CommonModule,
-    MainRoutingModule,
-    FontAwesomeModule,
-    SlickCarouselModule,
+  declarations: [
+    MainComponent,
+    AboutComponent,
+    FooterComponent,
+    GalleryComponent,
+    HeaderComponent,
+    HomeComponent,
+    MenuComponent,
+    HeaderComponent,
+    FooterComponent
   ],
-  exports: [HeaderComponent, FooterComponent],
+  imports: [CommonModule, MainRoutingModule, FontAwesomeModule, SlickCarouselModule],
 })
 export class MainModule {}
