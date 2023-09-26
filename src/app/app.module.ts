@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -20,13 +21,18 @@ import {
   faUser,
   faCircleArrowLeft,
   faCircleArrowRight,
+  faChevronCircleDown,
+  faChevronCircleUp,
+  faBookOpen,
+  faTableCells,
+  faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import { faSquare } from '@fortawesome/free-regular-svg-icons';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, SlickCarouselModule, MainModule, AdminModule],
+  imports: [BrowserModule, AppRoutingModule, SlickCarouselModule, MainModule, AdminModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
   exports: [FontAwesomeModule],
@@ -44,7 +50,12 @@ export class AppModule {
       faUtensils,
       faUser,
       faCircleArrowLeft,
-      faCircleArrowRight
+      faCircleArrowRight,
+      faChevronCircleDown,
+      faChevronCircleUp,
+      faBookOpen,
+      faTableCells,
+      faXmark
     );
   }
 }

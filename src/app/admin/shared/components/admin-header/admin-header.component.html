@@ -38,8 +38,26 @@
           [routerLink]="['/admin/menu']"
           [class.collapsed]="collapse"
         >
-          <fa-icon icon="utensils" size="xl"></fa-icon>
+          <fa-icon icon="book-open" size="xl"></fa-icon>
           <span class="side-title" [class.collapsed]="collapse">Menu</span>
+        </div>
+        <div
+          class="side-item side-child"
+          [class.selected]="currentRoute === '/admin/menu/category'"
+          [routerLink]="['/admin/menu/category']"
+          [class.collapsed]="collapse"
+        >
+          <fa-icon icon="table-cells" size="xl"></fa-icon>
+          <span class="side-title" [class.collapsed]="collapse">Category</span>
+        </div>
+        <div
+          class="side-item side-child"
+          [class.selected]="currentRoute === '/admin/menu/item'"
+          [routerLink]="['/admin/menu/item']"
+          [class.collapsed]="collapse"
+        >
+          <fa-icon icon="utensils" size="xl"></fa-icon>
+          <span class="side-title" [class.collapsed]="collapse">Item</span>
         </div>
       </li>
       <li>

@@ -1,0 +1,43 @@
+<div class="category">
+  <div class="breadcrumb">menu/category</div>
+  <div class="admin-div search-bar-div">
+    <!-- <div class="search-bar">
+
+    </div> -->
+    <div class="add-new">
+      <button class="add-btn" (click)="openAddModal()">Add</button>
+    </div>
+  </div>
+  <div class="admin-div table-div">
+    <table class="table">
+      <tr class="table-header">
+        <th>Name</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let cat of categories">
+        <td>{{ cat.name }}</td>
+        <td>edit</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="modal" *ngIf="addModal">
+  <article class="modal-container">
+    <header class="modal-container-header">
+      <h1 class="modal-container-title">Add Category</h1>
+      <button class="icon-button">
+        <fa-icon icon="xmark" size="lg"></fa-icon>
+      </button>
+    </header>
+    <section class="modal-container-body">
+      <form [formGroup]="categoryForm">
+        <label for="name">Name: </label>
+        <input id="name" type="text" formControlName="name" />
+      </form>
+    </section>
+    <footer class="modal-container-footer">
+      <button class="button is-ghost" (click)="closeAddModal()">Cancel</button>
+      <button class="button is-primary" (click)="addCategory()">Add</button>
+    </footer>
+  </article>
+</div>

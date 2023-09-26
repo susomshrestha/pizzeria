@@ -60,6 +60,10 @@ $page-header-width-sm: 100px;
           padding: 20px;
           cursor: pointer;
 
+          &.side-child {
+            padding-left: 40px;
+          }
+
           &.collapsed {
             justify-content: center;
           }

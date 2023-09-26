@@ -1,0 +1,48 @@
+@import "/src/styles.scss";
+
+.category {
+  .breadcrumb {
+    color: gray;
+  }
+
+  .search-bar-div {
+    display: flex;
+    justify-content: flex-end;
+    
+    .add-new {
+      .add-btn {
+        padding: 10px 20px;
+        background: $color-admin-main;
+        color: white;
+        outline: none;
+        border: 0;
+
+        &:hover {
+          background-color: darken($color: $color-admin-main, $amount: 15);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .table-div {
+    margin-top: 20px;
+
+    .table {
+      border: 0;
+      border-collapse: collapse;
+      width: 100%;
+
+      .table-header {
+        background: $color-admin-main;
+        color: white;
+      }
+
+      th,
+      td {
+        padding: 20px 10px;
+        text-align: left;
+      }
+    }
+  }
+}
